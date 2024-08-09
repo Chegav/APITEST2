@@ -4,7 +4,7 @@ COMO LO EJECUTAMOS
 1. Clonar el Repositorio  
 -Abre IntelliJ IDEA.  
 -Vamos a File > New > Project from Version Control.  
--Seleccionamos Git e ingresa la URL del repositorio: https://github.com/Chegav/automatizacion-E2E.  
+-Seleccionamos Git e ingresa la URL del repositorio: https://github.com/Chegav/ApiTest.git.  
 -Hacemos clic en Clone para clonar el repositorio en la máquina local.  
 
 2. Importa el Proyecto como un Proyecto Maven  
