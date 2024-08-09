@@ -1,5 +1,6 @@
-# ApiTest
+# ApiTest  
 
+COMO LO EJECUTAMO  
 1. Clonar el Repositorio  
 -Abre IntelliJ IDEA.  
 -Vamos a File > New > Project from Version Control.  
