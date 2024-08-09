@@ -1,0 +1,41 @@
+Hallazgos y Conclusiones del Ejercicio de Pruebas API
+
+Hallazgos
+
+---Creación de un Nuevo Usuario (Signup)--
+Entrada: Datos de usuario (username: 'cheto2889', password: 'Q0hFVE8yODg5')
+Salida Esperada: Código de estado HTTP 200
+Resultado: El registro del nuevo usuario fue exitoso. La respuesta del servidor no mostró errores y el usuario fue creado en el sistema.
+Observación: El servidor respondió correctamente y se registró el nuevo usuario sin problemas.
+
+---Intento de Crear un Usuario Ya Existente (Signup)--
+Entrada: Datos de usuario ya existente (username: 'chetos2', password: 'Y2hldG9zMTIz')
+Salida Esperada: Código de estado HTTP 200 y mensaje de error 'This user already exist.'
+Resultado: La solicitud fue procesada correctamente con un mensaje de error adecuado. La respuesta confirmaba que el usuario ya existía en el sistema.
+Observación: El sistema maneja correctamente la creación de usuarios duplicados y proporciona una respuesta clara.
+
+---Login con Usuario y Contraseña Correctos--
+Entrada: Credenciales válidas (username: 'chetos123', password: 'Y2hldG9zMTIz')
+Salida Esperada: Código de estado HTTP 200 y un token válido
+Resultado: La autenticación fue exitosa. Se recibió un token válido y no se presentó ningún error.
+Observación: El sistema autentica correctamente a los usuarios con credenciales válidas y emite un token adecuado.
+
+---Login con Usuario y Contraseña Incorrectos--
+Entrada: Credenciales inválidas (username: 'invalidUser', password: 'wrongPassword')
+Salida Esperada: Código de estado HTTP 200 y mensaje de error 'Wrong password.'
+Resultado: La solicitud fue procesada correctamente con el mensaje de error adecuado. Se indicó que las credenciales eran incorrectas.
+Observación: El sistema maneja adecuadamente los intentos de autenticación fallidos y proporciona mensajes de error claros.
+
+Conclusiones
+
+-Eficiencia en la Creación de Usuarios
+La API de registro de usuarios (signup) funciona de manera eficiente para crear nuevos usuarios y manejar casos de duplicación. Los errores son reportados claramente, lo que facilita la identificación de problemas.
+
+-Robustez en la Autenticación
+La API de inicio de sesión (login) demuestra ser robusta en la autenticación de usuarios. Responde correctamente tanto a credenciales válidas como inválidas, proporcionando tokens y mensajes de error según corresponda.
+
+-Manejo de Errores
+Ambos servicios, tanto el de registro como el de inicio de sesión, manejan los errores de manera efectiva. Los mensajes de error son informativos y ayudan a comprender la causa de los problemas encontrados.
+
+-Sugerencias para Mejoras
+Aunque el sistema maneja bien los casos probados, se recomienda agregar pruebas adicionales para situaciones extremas y verificar la seguridad del almacenamiento de contraseñas y tokens.
