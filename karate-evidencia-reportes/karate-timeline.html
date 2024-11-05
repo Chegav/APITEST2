@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"add_pet[1.1:54]","start":1730775854729,"end":1730775855025,"title":"add_pet[1.1:54] 22:04:14.729-22:04:15.025 Add a new pet"},{"id":2,"group":1,"content":"find_pet_by_status[1.1:21]","start":1730775855116,"end":1730775855425,"title":"find_pet_by_status[1.1:21] 22:04:15.116-22:04:15.425 Find pets by status"},{"id":3,"group":1,"content":"find_pet_by_status[1.2:22]","start":1730775855438,"end":1730775855739,"title":"find_pet_by_status[1.2:22] 22:04:15.438-22:04:15.739 Find pets by status"},{"id":4,"group":1,"content":"find_pet_by_status[1.3:23]","start":1730775855755,"end":1730775856055,"title":"find_pet_by_status[1.3:23] 22:04:15.755-22:04:16.055 Find pets by status"},{"id":5,"group":1,"content":"find_pet_by_status[1.4:24]","start":1730775856064,"end":1730775856356,"title":"find_pet_by_status[1.4:24] 22:04:16.064-22:04:16.356 Find pets by status"},{"id":6,"group":1,"content":"update_pet[1.1:29]","start":1730775857127,"end":1730775857723,"title":"update_pet[1.1:29] 22:04:17.127-22:04:17.723 Update pet information for a given pet ID"},{"id":7,"group":1,"content":"get_pet[1.1:23]","start":1730775856725,"end":1730775857024,"title":"get_pet[1.1:23] 22:04:16.725-22:04:17.024 Consultar mascota por ID"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
