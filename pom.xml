@@ -11,8 +11,8 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <karate.version>1.2.0</karate.version> <!-- Usa la versión más reciente -->
-        <junit.version>5.8.2</junit.version> <!-- Usa la versión más reciente -->
+        <karate.version>1.2.0</karate.version>
+        <junit.version>5.8.2</junit.version>
     </properties>
 
     <dependencies>
@@ -55,6 +55,10 @@
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
+                    <systemPropertyVariables>
+                        <karate.env>${karate.env}</karate.env>
+                        <karate.options>${karate.options}</karate.options>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>
