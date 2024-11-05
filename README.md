@@ -4,7 +4,7 @@ COMO LO EJECUTAMOS
 1. Clonar el Repositorio  
 -Abre IntelliJ IDEA.  
 -Vamos a File > New > Project from Version Control.  
--Seleccionamos Git e ingresa la URL del repositorio: https://github.com/Chegav/ApiTest.git.  
+-Seleccionamos Git e ingresa la URL del repositorio: https://github.com/Chegav/APITEST2.git.  
 -Hacemos clic en Clone para clonar el repositorio en la máquina local.  
 
 2. Importa el Proyecto como un Proyecto Maven  
@@ -30,8 +30,10 @@ COMO LO EJECUTAMOS
 
 7. En caso de que no se pueda ejecutar abrimos un terminal cmd y ejcutamos lo siguiente:
   ```bash
-mvn test -Dkarate.options="--tags @add_pet,@get_pet,@update_pet,@find_pet_by_status"
+    mvn test -Dkarate.options="--tags @add_pet,@get_pet,@update_pet,@find_pet_by_status"
      ```
--Esto ejecutará todas las pruebas al final en el terminal aparecerá los test para visualizarlos que pasos pasaron o se quedaron   
+
+
+    Esto ejecutará todas las pruebas al final en el terminal aparecerá los test para visualizarlos que pasos pasaron o se quedaron   
 
 
