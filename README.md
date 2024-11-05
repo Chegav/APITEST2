@@ -29,9 +29,10 @@ COMO LO EJECUTAMOS
 -Verificamo que todas las pruebas pasen correctamente. 
 
 7. En caso de que no se pueda ejecutar abrimos un terminal cmd y ejcutamos lo siguiente:
-  ```bash
+
+    ```bash
     mvn test -Dkarate.options="--tags @add_pet,@get_pet,@update_pet,@find_pet_by_status"
-     ```
+    ```
 
 
     Esto ejecutará todas las pruebas al final en el terminal aparecerá los test para visualizarlos que pasos pasaron o se quedaron   
